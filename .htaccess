@@ -1,0 +1,7 @@
+##### LOCAWEB - NAO REMOVER #####
+AddHandler php71-script .php
+suPHP_ConfigPath /home/comunidademoria1/
+##### LOCAWEB - NAO REMOVER #####
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.comunidademoria.com.br/$1 [R,L]

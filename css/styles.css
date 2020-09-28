@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+  background: #002F64;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+#Container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes showNav {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+#Content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 100%;
+  max-width: 600px;
+  
+  overflow: auto;
+  max-height: 700px;
+
+  animation: showNav 750ms ease-in-out both;
+}
+#Logo>img{
+  margin: 10px 0;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+#Content>form {
+  margin: 30px 0;
+  width: 500px;
+  text-align: center;
+  
+}
+
+
+#Content>h2, #Content>h3  {
+  margin-bottom: 24px;
+  text-align: center;
+ 
+}
+
+form>label {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#chat{
+  display: flex;
+  flex-direction: column;
+}
+
+#infoChat {
+  background-color: burlywood;
+}
+
+#messages{
+  background-color: white;
+  min-height: 400px;
+  flex:1;
+  color: black;
+}
+
+#messages>div{
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(224, 222, 222);
+  height: 30px;
+}
+
+#messages>div>.chat_info{
+  width: 80px;
+  font-weight: 700;
+
+}
+
+#messages>div>.chat_mensagem{
+  flex:1;
+  flex-wrap: wrap;
+  
+
+}
+
+#messages>div>.chat_excluir{
+  margin-right: 5px;
+}
+.input{
+  background: #bcb9c7;
+  border-radius: 10px;
+  padding: 16px;
+
+  border: 2px solid #232129;
+  width: 100%;
+
+  color: black;
+font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-top: 5px; 
+}
+
+.input>input {
+  color: rgb(34, 34, 34);
+  flex: 1;
+  border: 0;
+  background: transparent;
+}
+
+
+.input>input::placeholder{
+  color: black;
+  font-weight: 500;
+}
+
+.input>select {
+  color: #000;
+  flex: 1;
+  border: 0;
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  
+}
+select>option>div {
+  padding: 40px;
+  
+  
+}
+
+#submit {
+  background: #ff9000;
+  height: 56px;
+  border-radius: 10px;
+  border: 0px;
+  padding: 0 16px;
+  color: #fff;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 16px;
+  transition: background-color 0.4s;
+}
+
+#Button:hover {
+  background: #b86903;
+}
+
+
+@media (min-width: 1025px){
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bcb9c7; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666360; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666360; 
+}
+  #Background{
+    flex: 1;
+    background: url('../imagens/formulario.jpeg') no-repeat center;
+    background-size: cover;
+  }
+}
+
+
+
+.input>i{
+  color: #f4f4f4;
+  font-weight: 500;
+  margin-right: 5px;
+}
+  
+.focused {
+  border: 2px solid #ff9000;
+  
+}
+  
+.focused>i {
+  color: #ff9000;
+}
+
+.error{
+  text-align: start;
+  
+  flex: 1;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  background: rgba(138, 16, 16, 0.685);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.inputError{
+  border: 2px solid red;
+}
+
+.mensagem{
+  display: flex;
+  flex-direction: column;
+  background: #ff9000;
+  border-radius: 10px;
+  padding: 16px;
+
+  border: 2px solid #232129;
+  max-width: 400px;
+
+  color: #00142b;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 5px; 
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px){
+  #Content{
+    max-width: 1024px;
+  }
+}
+
+
+@media (max-width: 540px){
+  #Content>form{
+    width: 350px;
+    align-items: center;
+  }
+
+  #Content>h2 {
+    padding: 10px;
+  }
+
+  #ResultadoVoltar{
+    display: flex;
+    width: 250px;
+  
+  }
+  
+ 
+}
+
+
+.buttons {
+  display: flex;
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.buttons>.voltar{
+  height: 56px;
+  border-radius: 10px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons>a{
+  color: white;
+  text-decoration: none;
+}
+.buttonint {
+  width: 48% !important;
+}
